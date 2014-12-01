@@ -1,0 +1,328 @@
+/* CSS Document */
+
+/* Large background carousel */
+
+div.homecarousel {
+	position: relative;
+	height: 70%;
+	min-height: 400px;
+}
+
+/* Background images */
+
+img.background {
+	float: left;
+	margin-right: -100%;
+	position: relative;
+	width: auto;
+	height: auto;
+	z-index: 0;
+	display: block;
+	width: 100%;
+}
+
+.carousel > .carousel-clip > ul > li.item:after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;	
+	bottom: 0;
+	width: auto;
+	height: auto;
+	z-index: 0;
+	display: block;
+	content: '';
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.05) inset;
+	background: rgba(0,0,0,0.1);
+}
+	
+div.carousel .description, div.carousel .album-cover {
+	display: none;	
+}
+
+div.carousel {
+	position: relative !important;	
+	z-index: 0;
+	height: 100%;
+    overflow: hidden;
+}
+
+.carousel .carousel-clip {
+    overflow: hidden;
+    position: relative;
+	height: 100%;
+    z-index: 10;
+}
+
+.carousel .carousel-clip ul {
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+	display: block;
+	left: -100%;
+	height: 100%;
+}
+
+.carousel .carousel-clip ul li.item {
+    overflow: hidden;
+	position: relative !important;
+	z-index: 99;
+	height: 100%;
+	margin: 0;
+	display:block;
+	float: left;
+	vertical-align: top;
+}
+
+.carousel ul li .grid {
+    z-index: 99;
+	display:table;
+}
+
+div.carousel-caption {
+	margin-top: 3%;
+	padding-bottom: 3%;
+	position: relative; 
+	z-index: 999;
+}
+
+div.carousel-caption * {
+	color: #fff;	
+	text-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+div.no_bg div.carousel-clip * {
+	color: #666666 !important;
+}
+
+div.no_bg div.carousel-clip h2, div.no_bg div.carousel-clip h3, div.no_bg div.carousel-clip h4 {
+	color: #999999 !important;
+}
+
+div.carousel-caption [class*='col-'] {
+	display:table-cell; 
+	vertical-align:middle;
+}
+
+div.carousel-caption [class*='col-']:last-of-type * {
+	text-align: right; 	
+}
+
+div.carousel-caption h1 {
+	margin-bottom: 0.25em;
+}
+
+div.carousel-caption p {
+	
+}
+
+div.homecarousel div.sitetitle {
+	position: absolute;
+	color: #ffffff;
+	text-align: center;
+	top: 0;
+	bottom: 0;	
+	margin: auto;
+	z-index: 0;
+	left: 40px;
+	width: auto;
+	right: 40px;
+	z-index: 0;
+  	height: 200px;
+}
+
+div.homecarousel div.sitetitle * {
+	text-align: center;
+	color: rgba(255,255,255,0.95);	
+	margin: 0 0 10px 0;
+	padding: 0;
+	text-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+div.homecarousel div.sitetitle hr {
+	height: 1px;
+	background: none;
+	border-bottom: 1px solid rgba(255,255,255,0.75);
+}
+
+
+div.carousel-caption .button {
+	font-size: 1.2em;	
+}
+
+.carousel-control {
+	background: rgba(0,0,0,0.2);
+	height: 90px;
+	width: 90px;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 2em;
+	border-radius: 50%;
+	z-index: 999999999;
+	outline: none;
+}
+
+.carousel-control:active {
+	outline: none;
+}
+
+.carousel-control:hover {
+	background: rgba(0,0,0,0.3);
+}
+
+.carousel-control span {
+	display: block;
+	text-indent: -99999px;	
+	background: url(../images/sprite_leftrightarrow.png) 0 0 no-repeat;
+	width: 30px;
+	margin: 15px 30px;
+	height: 60px;
+}
+
+.carousel-control:hover {
+	border: none;	
+}
+
+.carousel-control.right {
+	right: 2em;
+	left: inherit;
+}
+
+.carousel-control.right span {
+	background-position: 100% 0;
+}
+
+.controls {
+  position: absolute;
+  bottom: 0.5em;
+  left: 50%;
+  z-index: 999999;
+  width: 30%;
+  padding-left: 0;
+  margin-left: -15%;
+  text-align: center;
+  list-style: none;
+  opacity: 0.9;
+}
+
+.controls li  {
+  display: inline-block;
+  margin: 0;
+}
+
+.controls li a {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin: 0.5em;
+  text-indent: -99999px;
+  cursor: pointer;
+  border: 1px solid #ffffff;
+  border-radius:  1.5em;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  outline: none !important;	
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.controls li a:active, .controls li a:focus {
+	outline: none !important;	
+}
+
+.controls .selected a {
+  background-color: #ffffff;
+}
+
+/* homecarousel */
+
+div.homecarousel {
+	position: relative;
+	overflow: hidden;	
+}
+
+div.homecarousel ul.carousel .item {
+	min-height: 600px;
+}	
+
+/* Feature Carousel */
+
+div.featurecarousel {
+
+	position: relative;
+}
+
+div.featurecarousel ul.carousel .item {
+	min-height: inherit;	
+}
+
+div.featurecarousel ul.carousel .item:first-child .grid * {
+	color: #ffffff;	
+}
+
+div.featurecarousel ul.carousel .item:nth-child(n+2) .grid * {
+	color: #ffffff;	
+}
+
+
+/* marker */
+
+div.marker-container {
+	width: auto;
+	text-align: center;
+	position: relative;
+	margin: 0 auto;
+	top: -11px;	
+}
+
+div.marker {
+  	background: url("/images/theme/sprite-up-arrow.png") no-repeat scroll 50% 0 rgba(0, 0, 0, 0);
+    clear: both;
+    height: 34px;
+    left: 0;
+    margin-top: -1px;
+	margin-left: -17px;
+    position: absolute;
+    z-index: 1;
+	width: 34px;
+	transition: all linear;
+}
+
+
+/* On small screens we need to add extra spacing for controls */
+
+/* Landscape mobile & down */
+@media (max-width: 1480px) {
+
+	.carousel-control {
+		background: rgba(0, 0, 0, 0.075); /*rgba(0,0,0,0.1);*/
+		height: 100%;
+		width: 29px;
+		left: 0;
+		border-radius: 0;
+	}
+	
+	.carousel-control.right {
+		right: 0;
+		left: inherit;
+	}
+	
+	.carousel-control:hover {
+		background: rgba(0,0,0,0.1);
+	}
+
+	.carousel-control span {
+		position: absolute;
+		background: url(../images/sprite_leftrightarrow_small.png) 0 0 no-repeat;
+		margin: auto 7px;
+		top: 0;
+		bottom: 0;
+		width: 15px;
+		height: 30px;
+	}
+
+}
+
+.carousel-album-cover {
+	display: block !important;	
+}

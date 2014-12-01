@@ -1,0 +1,157 @@
+/* CSS Document */
+
+/*
+		Rotator 
+	*/
+	
+	div.widget.rotator {
+	overflow: hidden;
+	margin: 2em 0;
+	position: relative;
+}
+div.widget.rotator ul.rotator-categories {
+	height: 200px;
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+	top: -2em;
+	width: 70%;
+}
+div.widget.rotator ul.rotator-categories li {
+	border-radius: 5px;
+	cursor: pointer;
+	display: table;
+	font-size: 150%;
+	height: 8em;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	width: 8em;
+}
+div.widget.rotator ul.rotator-categories li:after {
+	background: none repeat scroll 0 0 rgba(20, 20, 20, 0.1);
+	border-radius: 1px;
+	bottom: 0;
+	box-shadow: 0 0 15px 5px rgba(20, 20, 20, 0.1);
+	content: "";
+	display: block;
+	height: 0;
+	left: 50%;
+	margin-left: -40%;
+	position: absolute;
+	top: 10.5em;
+	transform: scaleY(0.3);
+	width: 80%;
+	z-index: 0 !important;
+}
+div.widget.rotator ul.rotator-categories li span {
+	display: table-cell;
+	line-height: 1.5em;
+	vertical-align: middle;
+}
+div.widget.rotator div.rotator-options-container {
+	height: 10em;
+	position: relative;
+	z-index: 999;
+	margin-top: 2em;
+}
+div.widget.rotator ul.rotator-options {
+	font-size: 80%;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+div.widget.rotator ul.rotator-options li {
+	display: inline-block;
+	margin: 0 0.1em;
+	position: relative;
+	vertical-align: middle;
+}
+div.widget.rotator ul.rotator-options li.active:after {
+	border: 10px solid transparent;
+	border-bottom-color: #DDDDDD;
+	bottom: -4.2em;
+	content: '';
+	height: 0;
+	left: 50%;
+	margin: 0 0 0 -10px;
+	position: absolute;
+	width: 0;
+	z-index: 9999999;
+}
+div.widget.rotator ul.rotator-options li a {
+	border-radius: 50%;
+	display: table;
+	height: 6.5em;
+	position: relative;
+	text-align: center;
+	width: 6.5em;
+	z-index: 10;
+}
+div.widget.rotator ul.rotator-options li a:after {
+	background: none repeat scroll 0 0 rgba(20, 20, 20, 0.1);
+	border-radius: 100%;
+	bottom: 0;
+	box-shadow: 0 0 15px 10px rgba(20, 20, 20, 0.075);
+	content: "";
+	display: block;
+	height: 0;
+	left: 50%;
+	margin-left: -2em;
+	position: absolute;
+	top: 7.5em;
+	transform: scaleY(0.3);
+	-webkit-transform: scaleY(0.3);
+	width: 4em;
+	z-index: 10;
+}
+div.widget.rotator ul.rotator-options li a:hover {
+	text-decoration: none;
+}
+div.widget.rotator ul.rotator-options li a:active {
+	text-decoration: none;
+}
+div.widget.rotator ul.rotator-options li a span {
+	display: table-cell;
+	vertical-align: middle;
+}
+div.widget.rotator div.rotator-panels-container > div {
+	border: 6px solid #ddd;
+	border-radius: 6px;
+	margin: -1.5em 0 2em !important;
+	padding: 12px;
+	text-align: left;
+	background: #fff;
+	position: relative;
+	z-index: 999;
+}
+.ie7 div.widget.rotator ul.rotator-options li {
+	display: inline;
+	margin-top: 1em;
+	zoom: 1;
+}
+.ie7 div.widget.rotator ul.rotator-options li a {
+	padding: 1em 1em 2em 1em;
+}
+div.widget.rotator .rotator-controls a.rotate-back {
+	background-position: left top;
+	position: absolute;
+	top: 8em;
+	left: 0;
+}
+div.widget.rotator .rotator-controls a.rotate-next {
+	background-position: right top;
+	position: absolute;
+	top: 8em;
+	right: 0;
+}
+div.widget.rotator .rotator-controls a {
+	background: url("/resources_app/images/lookfeel/carousel-buttons.png") no-repeat scroll -25px top transparent;
+	display: block;
+	height: 26px;
+	text-indent: -9000px;
+	width: 26px;
+	cursor: pointer;
+	z-index: 9999;
+}

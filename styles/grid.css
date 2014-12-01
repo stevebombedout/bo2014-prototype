@@ -1,0 +1,168 @@
+/* CSS Document */
+
+*,
+*:after,
+*:before {
+	margin: 0;
+	padding: 0;
+	/* Removes padding behaviour on widths */
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* Attribute selector */
+[class*='col-'] {
+	float: left;
+	padding: 40px;
+	text-align: left;
+}
+
+/* Floats last ".col-" to the right */
+[class*='col-']:last-of-type {
+	float: right;
+}
+
+/* Allow for embedded columns within columns */
+
+[class*='col-'] [class*='col-'], [class*='col-'] > .grid {
+	padding-top: 0;	
+	padding-bottom: 0;
+}
+
+[class*='col-'] > .grid {
+	margin: 0 -40px;	
+	width: auto;
+}
+
+[class*='col-'] [class*='col-']:first-of-type {
+	/* padding-left: 0; */ 
+}
+
+[class*='col-'] [class*='col-']:last-of-type {
+	/* padding-right: 0; */ 
+}
+
+[class*='col-'] *:first-child {
+	margin-top: 0;	
+}
+
+.row {
+	width: 100%;	
+	text-align: center;
+}
+
+.row.divider {
+	border-top: 1px solid #E2E2E2;	
+}
+
+.nopadding, .nopadding [class*='col-'] {
+	padding-bottom: 0;	
+}
+
+.grid {
+	max-width: 1260px;	
+	text-align: left;
+	margin: 0 auto;
+	position: relative;
+	width: 100%;
+}
+
+/* Clearfix */
+.row:after, .grid:after {
+	content: "";
+	display: table;
+	clear: both;
+	position: relative;
+}
+
+/* Main Widths */
+.col-1		{width: 100%;}
+.col-2  	{width: 50%;}
+.col-3		{width: 33.3333%;}
+.col-4		{width: 25%;}
+.col-5		{width: 20%;}
+.col-6		{width: 16.6666666667%;}
+.col-7		{width: 14.2857142857%;}
+.col-8		{width: 12.5%;}
+.col-9		{width: 11.1111111111%;}
+.col-10		{width: 10%;}
+.col-11 	{width: 9.09090909091%;}
+.col-12		{width: 8.33%;}
+.col-12-5   {width: 41.6666666667%;}
+.col-12-7   {width: 58.3333%;}
+
+.col-3-2  {width: 66.6666666667%;}
+
+.col-4-3  {width: 75%;}
+
+/* Landscape mobile & down */
+@media (max-width: 30em) {
+	.col-1,
+	.col-2,
+	.col-3,
+	.col-4,
+	.col-5,
+	.col-6,
+	.col-7,
+	.col-8,
+	.col-9,
+	.col-10,
+	.col-11,
+ 	.col-12,
+	.col-4-3,
+	.col-3-2,
+	.col-12-5,
+	.col-12-7  {
+		width: 100%;
+	}
+	*/
+	/* Attribute selector */
+	/*
+	[class*='col-'] {
+		padding: 40px 40px 0 40px;
+	}
+}
+
+/* Portrait tablet to landscape */
+@media (min-width: 30em) and (max-width: 45em) {
+	
+	.col-6,
+	.col-8,
+	.col-10,
+	.col-12 {
+		width: 100%
+	}
+
+	.col-1,
+	
+	.col-2,
+	.col-3,
+	.col-4,
+	.col-5,
+	.col-7,
+	.col-9,
+	.col-11,
+	.col-4-3,
+	.col-3-2  {
+		width: 100%
+	}
+}
+
+/* Landscape to small desktop */ 
+@media (min-width: 45em) and (max-width: 65em) {
+	.col-2 {
+		width: 50%;
+	}
+	
+	.col-7 {
+		width: 100%
+	}
+
+
+	.col-8,
+	.col-10,
+	.col-12 {
+		width: 50%
+	}
+}
